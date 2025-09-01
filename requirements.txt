@@ -14,3 +14,5 @@ scikit-learn → If you used ML for predictions/backtesting
 ta → Technical indicators (RSI, MACD, Bollinger Bands, etc.)
 ccxt → Crypto exchange connectivity (Binance, Bybit, etc.)
 requests → For API calls (price feeds, logging)
+
+
