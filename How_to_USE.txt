@@ -1,0 +1,60 @@
+How to Use the Automatic Trading Bot
+
+1. Clone or Download the Repository
+    Click the green Code button in GitHub and copy the HTTPS link.
+    Open your terminal (or Anaconda prompt) and run:
+   ==> git clone https://github.com/yourusername/Trading_Bot.git
+    cd Trading_Bot
+
+2. Install Dependencies
+    Make sure you have Python 3.8+ installed.
+    Install the required libraries:
+   ==> pip install -r requirements.txt
+
+3. Get API Keys from Exchange
+    Create an account on a supported exchange (e.g., Binance, Bybit).
+    Go to your exchange dashboard → API Management.
+    Generate API Key and Secret Key.
+    Copy them and paste into the config.json file in the repo (or directly in code):
+  ==> {
+       "api_key": "YOUR_API_KEY",
+       "secret_key": "YOUR_SECRET_KEY",
+       "exchange": "binance"
+       }
+   NOTE:- ⚠️ Never share your API keys publicly!
+
+4. Configure Trading Settings
+     Open config.json or the notebook cell where parameters are defined.
+     Adjust settings like:
+     trading_pair: "BTC/USDT"
+     timeframe: "15m"
+     risk_per_trade: 0.01 (1% of capital)
+     stop_loss and take_profit levels
+
+5. Run Backtesting First (Safe Mode)
+     Run the trading_bot.ipynb notebook.
+     Select Backtest Mode (uses historical data).
+     Check results → profit/loss, win rate, drawdowns.
+     If satisfied, move to live trading.
+
+6. Enable Live Trading
+     Switch mode to Live Trading in the code/config.
+     Start the bot:
+  ==> python trading_bot.py
+     The bot will now fetch real-time prices, generate buy/sell signals, and place trades automatically.
+
+7. Monitor Logs and Performance
+     The bot logs every trade (time, price, PnL).
+     Use plotly charts inside the notebook to visualize performance.
+     Stop anytime with CTRL + C.
+
+
+8. SAFETY TIPS
+     Always start with a demo account or testnet (Binance Testnet, Bybit Testnet).
+     Never trade with large capital until you fully trust the bot.
+     Adjust risk management settings before going live.
+
+
+✅ That’s it! Now even a beginner can run your bot step by step.
+
+
